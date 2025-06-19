@@ -3,18 +3,18 @@ package vista;
 import modelo.JuegoDados;
 import java.util.Scanner;
 
-public class ConsolaDados {
-    Scanner scanner = new Scanner(System.in);
+public abstract class ConsolaDados {
+    private final Scanner scanner;
 
-    /**
-     * Controla el ciclo principal del menú del sistema.
-     */
+    public ConsolaDados(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
     public void menu() {
         int opcion;
         do {
             mostrarOpciones();
             System.out.print("Seleccione una opción: ");
-
             try {
                 opcion = Integer.parseInt(scanner.nextLine());
                 ejecutarOpcion(opcion);
@@ -67,4 +67,6 @@ public class ConsolaDados {
             System.out.println("Perdiste.");
         }
     }
+
+    protected abstract void jugar();
 }
