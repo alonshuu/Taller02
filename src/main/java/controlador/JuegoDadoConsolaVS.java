@@ -1,4 +1,4 @@
-package vista;
+package controlador;
 
 public class JuegoDadoConsolaVS {
 }
