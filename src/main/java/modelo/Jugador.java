@@ -1,41 +1,22 @@
 package modelo;
 
 public class Jugador {
-    private final String nombre;
-    private final juegoDado juego;
+    private String nombre;
+    private int puntos;
 
-
-
-    public Jugador(String nombre, juegoDado juego) {
+    public Jugador(String nombre) {
         this.nombre = nombre;
-        this.juego = juego;
+        this.puntos = 0;
     }
 
-    public void lanzarDados(){
-        juego.jugar();
-    }
-
-    /// getters
-
-    public String getnombre(){
+    public String getNombre() {
         return nombre;
     }
-    public int getDado1(){
-        return juego.getValorDado1();
+
+    public void sumarPunto() {
+        puntos++;
     }
-    public int getDado2(){
-        return juego.getValorDado2();
+    public int getPuntos() {
+        return puntos;
     }
-
-    public int getSuma(){
-        return juego.getSuma();
-    }
-    public boolean gano(){
-        return juego.esGanador();
-    }
-
-
-
-
-
 }

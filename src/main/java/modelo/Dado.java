@@ -1,17 +1,14 @@
 package modelo;
-
 import java.util.Random;
 
 public class Dado {
-    private int caraSuperior;
-    private static final Random random = new Random();
-
+    private int cara;
 
     public void lanzar() {
-        caraSuperior = random.nextInt(6) + 1;
+        this.cara = new Random().nextInt(6) + 1;
     }
 
-    public int getCaraSuperior() {
-        return caraSuperior;
+    public int getCara() {
+        return cara;
     }
 }
